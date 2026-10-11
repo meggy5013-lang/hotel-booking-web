@@ -1,0 +1,277 @@
+/* ============================================================
+   Sunrise Hotel — Stylesheet
+   Admission No: CT100/G/23988/24
+   ============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== Header ===== */
+header {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.logo h1 { font-size: 1.6rem; }
+.logo p  { font-size: 0.85rem; opacity: 0.85; }
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+nav a:hover,
+nav a.active { background: rgba(255, 255, 255, 0.2); }
+
+/* ===== Hero ===== */
+.hero {
+    background: linear-gradient(rgba(30, 60, 114, 0.75), rgba(42, 82, 152, 0.75)),
+                url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200') center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.hero h2 { font-size: 2.4rem; margin-bottom: 1rem; }
+.hero p  { font-size: 1.1rem; margin-bottom: 2rem; }
+
+.btn-primary {
+    display: inline-block;
+    background: #ff9800;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover { background: #e68900; transform: translateY(-2px); }
+
+/* ===== Room Cards ===== */
+.rooms-overview,
+.services-overview {
+    padding: 3rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.rooms-overview h2,
+.services-overview h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1e3c72;
+}
+
+.room-cards {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    flex: 1 1 250px;
+    max-width: 320px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.card:hover { transform: translateY(-5px); }
+.card h3 { color: #1e3c72; margin-bottom: 0.5rem; }
+.card .price { color: #ff9800; font-weight: 700; margin-top: 0.5rem; }
+
+.services-overview ul {
+    list-style: none;
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.services-overview li { padding: 0.5rem 0; border-bottom: 1px solid #eee; }
+.services-overview li:last-child { border-bottom: none; }
+
+/* ===== Booking Form ===== */
+.booking-section {
+    max-width: 750px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.booking-section h2 {
+    text-align: center;
+    color: #1e3c72;
+    margin-bottom: 1.5rem;
+}
+
+fieldset {
+    border: 1px solid #dde3ec;
+    border-radius: 8px;
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+legend { font-weight: 700; color: #1e3c72; padding: 0 0.5rem; }
+
+label {
+    display: block;
+    margin-top: 0.8rem;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #2a5298;
+    box-shadow: 0 0 0 2px rgba(42, 82, 152, 0.15);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.checkbox-label input[type="checkbox"] { width: auto; transform: scale(1.2); }
+
+.info-text {
+    color: #2a5298;
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+    font-style: italic;
+}
+
+.warning-text {
+    color: #d32f2f;
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+    font-weight: 600;
+}
+
+.bill-fieldset { background: #f0f6ff; border-color: #2a5298; }
+
+#billSummary p { display: flex; justify-content: space-between; padding: 0.3rem 0; }
+#billSummary hr { margin: 0.6rem 0; border: none; border-top: 1px dashed #2a5298; }
+.total-line { font-size: 1.15rem; font-weight: 700; color: #1e3c72; }
+
+/* ===== Error Box ===== */
+.error-box {
+    display: none;
+    background: #ffe6e6;
+    border-left: 5px solid #d32f2f;
+    color: #b71c1c;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+}
+
+.error-box ul { margin-left: 1.2rem; }
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #1e3c72;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* ===== Confirmation ===== */
+.confirmation-section {
+    max-width: 650px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.confirmation-section h2 { color: #2e7d32; margin-bottom: 1.5rem; font-size: 1.8rem; }
+
+.confirmation-details { text-align: left; margin: 1.5rem 0; }
+
+.confirmation-details p {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.confirmation-details p span:first-child { font-weight: 600; color: #555; }
+
+.total-amount {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #ff9800;
+    text-align: center;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #fff8e1;
+    border-radius: 8px;
+}
+
+.thank-you { font-style: italic; color: #555; margin-top: 1rem; }
+.error-page { color: #d32f2f; }
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    header { flex-direction: column; text-align: center; }
+    nav { margin-top: 0.8rem; }
+    nav a { margin: 0 0.5rem; }
+    .hero h2 { font-size: 1.7rem; }
+    .booking-section { padding: 1.2rem; margin: 1rem; }
+}
